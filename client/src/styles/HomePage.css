@@ -1,0 +1,363 @@
+body, html, .home-root {
+  font-family: 'Poppins', Arial, Helvetica, sans-serif !important;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.home-root {
+  /* Add any specific styles for .home-root here if needed, but NOT background */
+}
+
+.home-container {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  width: 240px;
+  background-color: #001f3e;
+  color: #aaaaaa;
+  padding: 15px 0;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.sidebar-logo {
+  height: 60px;
+  margin: 0 20px 40px;
+}
+
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-left: 0;
+  margin-bottom: 15px;
+  padding: 0;
+}
+
+.sidebar-nav a {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.sidebar-nav a:hover {
+  background-color: #ffffff;
+  color: #001f3e;
+}
+
+.sidebar-nav a.active {
+  color: #001f3e;
+  background-color: #ffffff;
+  text-decoration: none;
+}
+
+.sidebar-nav a:hover .sidebar-icon svg,
+.sidebar-nav a.active .sidebar-icon svg {
+  stroke: #001f3e;
+}
+
+.sidebar-nav a:hover .sidebar-icon span[role="img"],
+.sidebar-nav a.active .sidebar-icon span[role="img"] {
+  color: #001f3e;
+}
+
+.sidebar-divider {
+  height: 1px;
+  background-color: #aaaaaa;
+  margin: 15px 0;
+  width: calc(100% - 40px);
+  margin: 15px auto;
+}
+
+.sidebar-user {
+  display: none;
+}
+
+.sidebar-user-avatar {
+  width: 30px;
+  height: 30px;
+  background-color: #001f3e;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 14px;
+  margin-right: 10px;
+}
+
+.sidebar-user-name {
+  font-weight: 700;
+  color: #000000;
+}
+
+.sidebar-user-email {
+  font-size: 12px;
+  color: #555;
+}
+
+.sidebar-user-corner {
+  margin-top: auto;
+  background-color: #ffffff;
+  padding: 15px 20px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.sidebar-icon {
+  margin-right: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.sidebar-nav a span[role="img"] {
+  font-size: 18px;
+}
+
+.main-content {
+  flex-grow: 1;
+  padding: 20px;
+  background-color: #f3f4f6;
+  color: #000000;
+}
+
+.main-header {
+  margin-bottom: 20px;
+}
+
+.search-bar-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.search-bar {
+  width: 500px;
+  padding: 10px 20px;
+  border: 1px solid #383838;
+  border-right: none;
+  border-radius: 20px 0 0 20px;
+  background-color: #ffffff;
+  color: #000000;
+  font-size: 16px;
+  outline: none;
+}
+
+.search-bar::placeholder {
+  color: #aaaaaa;
+}
+
+.search-icon {
+  padding: 9px 20px;
+  background-color: #001f3e;
+  border: 1px solid #383838;
+  border-left: none;
+  border-radius: 0 20px 20px 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.search-icon svg {
+  width: 20px;
+  height: 20px;
+  stroke: #ffffff;
+}
+
+.divider {
+  width: 100%;
+  margin: 0 auto 1.2rem auto;
+  border: none;
+  border-top: 1.5px solid #0a2044;
+}
+
+.filters-row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.filter-btn {
+  background-color: #ffffff;
+  color: #000000;
+  border: 1px solid #001f3e;
+  border-radius: 20px;
+  padding: 8px 15px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.filter-btn:hover {
+  background-color: #001f3e;
+  color: #ffffff;
+}
+
+.filter-btn.active {
+  background-color: #001f3e;
+  color: #ffffff;
+}
+
+.listings-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.listing-card {
+  background-color: #ffffff;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+  display: block;
+  width: 100%;
+  height: auto;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.listing-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  display: block;
+}
+
+.listing-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0) 100%);
+  padding: 10px;
+  color: #ffffff;
+}
+
+.listing-title-row {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 5px;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: relative;
+  width: 100%;
+}
+
+.listing-title {
+  font-size: 16px;
+  font-weight: bold;
+  flex-grow: 1;
+  color: #ffffff;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+  margin-right: 0;
+}
+
+.listing-badge {
+  background-color: #001f3e;
+  color: #ffffff;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  font-weight: bold;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+
+.listing-rating {
+  font-size: 13px;
+  color: #cccccc;
+}
+
+.listing-rating .stars {
+  color: #ffc107;
+  margin-right: 5px;
+}
+
+.listing-rating .rating-value,
+.listing-rating .rating-count {
+  margin-right: 0;
+}
+
+.listing-card .category-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #001f3e;
+  color: #ffffff;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  font-weight: bold;
+  z-index: 10;
+}
+
+.listing-card .p-4 {
+  padding: 16px;
+}
+
+.listing-card h3 {
+  margin-bottom: 8px;
+}
+
+.listing-card .mt-2 {
+  margin-top: 8px;
+}
+
+.listing-card .flex {
+  display: flex;
+}
+
+.listing-card .items-center {
+  align-items: center;
+}
+
+.listing-card .text-yellow-400 {
+  color: #fbbf24;
+}
+
+.listing-card .text-sm {
+  font-size: 0.875rem;
+}
+
+.listing-card .text-gray-600 {
+  color: #4b5563;
+}
+
+.listing-card .ml-2 {
+  margin-left: 8px;
+}
+
+.listing-card svg path {
+  stroke: currentColor;
+}
+
+.listing-card svg.fill-current path {
+  fill: currentColor;
+}
+
+.listing-card svg.stroke-current path {
+  stroke: currentColor;
+  fill: none;
+} 

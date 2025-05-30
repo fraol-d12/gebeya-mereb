@@ -1,0 +1,282 @@
+/* SignUpForm.css - Styles for the sign-up card and form */
+.signup-card {
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  width: 100%;
+  max-width: none;
+  max-height: 650px;
+  margin: 3rem auto 0 auto;
+  padding: 1.3rem 2.2rem 1rem 2.2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: auto;
+}
+.signup-title {
+  color: #222;
+  font-size: 1.5rem;
+  font-weight:   700;
+  margin-bottom: 1.2rem;
+  text-align: center;
+}
+.signup-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+.signup-form .form-group {
+  width: 100%;
+  margin-bottom: 0.5rem;
+}
+.blue-label {
+  color: #001f3e;
+  font-weight: 600;
+  margin-bottom: 0.32rem;
+  display: block;
+  font-size: 1rem;
+  letter-spacing: 0.01em;
+}
+
+.blue-label::after {
+  content: " *";
+  color: #dc3545;
+}
+
+.blue-label.optional::after {
+  content: "";
+}
+
+.signup-form input,
+.signup-form select {
+  width: 100%;
+  padding: 0.7rem 0.9rem;
+  border-radius: 10px;
+  border: none;
+  background: #e9ecef;
+  color: #222;
+  font-size: 1rem;
+  margin-top: 0.1rem;
+  margin-bottom: 0.1rem;
+  outline: none;
+  box-sizing: border-box;
+}
+.signup-form input[type="file"] {
+  background: none;
+  padding: 0;
+  border: none;
+}
+.file-group {
+  position: relative;
+}
+.file-group .file-label {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-weight: 500;
+  color: #222;
+}
+.file-group input[type="file"]::-webkit-file-upload-button {
+  background: #0a2044;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.5rem 1.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-right: 1rem;
+}
+.file-group input[type="file"]::file-selector-button {
+  background: #0a2044;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.5rem 1.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-right: 1rem;
+}
+.file-cancel-btn {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  transition: background-color 0.2s;
+}
+.file-cancel-btn:hover {
+  background: #c82333;
+}
+.checkbox-group {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  font-size: 0.97rem;
+  color: #222;
+  margin-bottom: 0.2rem;
+}
+.checkbox-group input[type="checkbox"] {
+  accent-color: #0a2044;
+  width: 1.1rem;
+  height: 1.1rem;
+  margin-top: 0.2rem;
+}
+.checkbox-group a {
+  color: #0a2044;
+  text-decoration: underline;
+}
+.checkbox-group.required label::after {
+  content: " *";
+  color: #dc3545;
+}
+.checkbox-group.required input[type="checkbox"]:invalid {
+  border-color: #dc3545;
+}
+.signup-submit-btn {
+  width: 100%;
+  background: #0a2044;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 0.85rem 0;
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin-top: 0.5rem;
+  margin-bottom: 0.1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.signup-submit-btn:hover {
+  background: #14336b;
+}
+.back-button {
+  width: 100%;
+  background: transparent;
+  color: #0a2044;
+  border: 1.5px solid #0a2044;
+  border-radius: 10px;
+  padding: 0.7rem 0;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-top: 0.1rem;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+.back-button:hover {
+  background: #0a2044;
+  color: #fff;
+}
+.error-text {
+  color: #dc3545;
+  font-size: 0.92rem;
+  margin-top: 0.1rem;
+  display: block;
+}
+.error-message {
+  color: #fff;
+  background: #dc3545;
+  border-radius: 8px;
+  padding: 0.7rem 1rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.submit-status {
+  border-radius: 8px;
+  padding: 0.7rem 1rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  font-size: 1rem;
+  width: 100%;
+}
+
+.submit-status.success {
+  color: #fff;
+  background: #28a745;
+}
+
+.submit-status.error {
+  color: #fff;
+  background: #dc3545;
+}
+
+.signup-form input:required,
+.signup-form select:required {
+  border: 1px solid #e9ecef;
+}
+
+.signup-form input:required:invalid,
+.signup-form select:required:invalid {
+  border-color: #dc3545;
+}
+
+.signup-form input:required:focus,
+.signup-form select:required:focus {
+  border-color: #0a2044;
+  box-shadow: 0 0 0 2px rgba(10, 32, 68, 0.1);
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(10, 32, 68, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: #0a2044;
+  color: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+  padding: 2.5rem 2.5rem 2rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 340px;
+  max-width: 90vw;
+  text-align: center;
+}
+
+.modal-checkmark {
+  margin-bottom: 1.2rem;
+}
+
+.modal-message {
+  font-size: 1.15rem;
+  margin-bottom: 1.5rem;
+  color: #fff;
+}
+
+.modal-back-btn {
+  background: none;
+  color: #fff;
+  border: none;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-decoration: underline;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.modal-back-btn:hover {
+  color: #7ED957;
+} 

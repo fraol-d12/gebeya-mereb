@@ -1,0 +1,95 @@
+.listing-details-container {
+  display: flex;
+  padding: 20px;
+  font-family: 'Arial', sans-serif; /* Use a common sans-serif font */
+}
+
+.listing-image-section {
+  flex: 1; /* Take up available space */
+  margin-right: 20px; /* Space between image section and info section */
+}
+
+.main-listing-image {
+  width: 100%; /* Make the main image responsive */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 8px; /* Rounded corners */
+  margin-bottom: 10px; /* Space below main image */
+}
+
+.listing-gallery {
+  display: flex;
+  gap: 10px; /* Space between gallery thumbnails */
+  overflow-x: auto; /* Add horizontal scroll if needed */
+}
+
+.gallery-thumbnail {
+  width: 80px; /* Fixed width for thumbnails */
+  height: 60px; /* Fixed height for thumbnails */
+  object-fit: cover; /* Cover the area */
+  border-radius: 4px; /* Rounded corners */
+  cursor: pointer;
+}
+
+.listing-info-section {
+  flex: 1; /* Take up available space */
+}
+
+.listing-header {
+  display: flex;
+  justify-content: space-between; /* Space out heading and buttons */
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.listing-header h2 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 10px; /* Space between buttons */
+}
+
+.action-btn {
+  padding: 8px 15px;
+  border: 1px solid #001f3e; /* Dark blue border */
+  border-radius: 20px; /* Rounded corners */
+  background-color: #ffffff; /* White background */
+  color: #001f3e; /* Dark blue text */
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.action-btn:hover {
+  background-color: #001f3e; /* Dark blue background on hover */
+  color: #ffffff; /* White text on hover */
+}
+
+.details-block {
+  margin-bottom: 20px;
+}
+
+.details-block h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #333; /* Dark grey color for headings */
+}
+
+.details-block p,
+.details-block ul {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #555; /* Medium grey color for text */
+}
+
+.details-block ul {
+  padding-left: 20px; /* Indent list items */
+}
+
+.more-like-this h3 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: #333; /* Dark grey color for heading */
+} 
